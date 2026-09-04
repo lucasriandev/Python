@@ -53,8 +53,26 @@ print(df_estoque)
 print("Quantidade de vazios!")
 print(df_estoque.isnull().mean() * 100)
 
-print("Preenchendo dados com 0")
+print("Exercicio 5")
 df_estoque["preco"] = df_estoque["preco"].fillna(0)
 df_estoque["estoque"] = df_estoque['estoque'].fillna(0)
 print(df_estoque)
 
+print("Exercicio 6")
+novo_data = df_estoque.dropna(subset=["preco"])
+print(" Nova tabela")
+print(novo_data)
+
+print("Exercicio 7")
+agrupamento = df.groupby("setor")["salario"].min().reset_index()
+print(agrupamento)
+
+print("Exercicio 8")
+resumo_completo = df.groupby("setor").agg({
+    "salario": ["mean", "sum"],
+    "idade": ["min", "max"],
+    "nome": ["count"]
+}).reset_index()
+
+print("\n--- RESUMO COMPLETO POR SETOR ---")
+print(resumo_completo)
