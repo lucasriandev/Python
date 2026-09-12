@@ -49,8 +49,8 @@ df = pd.DataFrame(dados_empresa)
 #plt.show()
 
 #Exercicio 5
-salario_acima_4500 = df[df["salario"] > 4500]
-print(salario_acima_4500)
+#salario_acima_4500 = df[df["salario"] > 4500]
+#print(salario_acima_4500)
 
-sns.scatterplot(data=salario_acima_4500, x="nome", y="salario", hue="setor")
-plt.show()
+#sns.scatterplot(data=salario_acima_4500, x="nome", y="salario", hue="setor")
+#plt.show()
