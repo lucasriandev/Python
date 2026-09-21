@@ -54,3 +54,34 @@ df = pd.DataFrame(dados_empresa)
 
 #sns.scatterplot(data=salario_acima_4500, x="nome", y="salario", hue="setor")
 #plt.show()
+
+#Exercicio 6
+
+#df = df.sort_values(by="idade", ascending=False)
+#print(df)
+
+#plt.plot(df["idade"], df["salario"])
+#plt.xlabel("idade", fontsize=15)
+#plt.ylabel("salario", fontsize=15)
+#plt.show()
+
+#Exercicio 7
+#sns.histplot(data=df, x="salario", kde=True )
+#plt.title("Tendencia de distribuição")
+#plt.show()
+
+#Exercicio 8
+#sns.barplot(data=df, x="nome", y="salario")
+#plt.xticks(rotation=45)
+#plt.show()
+
+#Exercicio 9
+#sns.scatterplot(data=df, x="anos_experiencia", y="salario", hue="setor", size="satisfacao")
+#plt.title("Experiência vs Salário (Tamanho = Satisfação)")
+#plt.show()
+
+#Exercicio 10
+
+#media = df.groupby("setor")["satisfacao"].mean()
+#print(media)
+#plt.savefig("????", dpi=300, bbox_inches="tight")
