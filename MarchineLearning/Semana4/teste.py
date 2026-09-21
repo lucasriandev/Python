@@ -11,17 +11,22 @@ dados = dados = {
 
 df = pd.DataFrame(dados)
 
+# 2. Separando "As Perguntas" (X) e "O Gabarito" (y)
 X = df[["anos_experiencia"]]
 y = df["salario"]
 
-print("Formato do X", X.shape)
-print("Formato do y", y.shape)
-
-
+# 3. Dividindo em Treino e Teste (80% treino, 20% teste)
 X_treino, X_teste, y_treino, y_teste = train_test_split(X, y, test_size=0.2, random_state=42)
+print("Dados separados em Treino e Teste!")
 
 modelo = LinearRegression()
 modelo.fit(X_treino, y_treino)
+print("Robo treinado!")
 
 previsoes = modelo.predict(X_teste)
+
+print("Gabarito Real (Dados de Teste):")
+print(y_teste.values)
+
+print("\nO que o modelo previu:")
 print(previsoes)
