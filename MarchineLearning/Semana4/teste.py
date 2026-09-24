@@ -15,9 +15,9 @@ y = data['price']
 
 # Example: 950 sqft, 5th floor, 2 bedrooms
 new_apartment = pd.DataFrame({
-  'size_sqft': [950],
-  'floor': [5],
-  'bedrooms': [2]
+  'size_sqft': [350],
+  'floor': [3],
+  'bedrooms': [1]
 })
 
 
