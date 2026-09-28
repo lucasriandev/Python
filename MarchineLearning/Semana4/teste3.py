@@ -1,10 +1,7 @@
-#regressao
-
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
-# Creating the dataset
 data = pd.DataFrame({
   'size_sqft': [450, 500, 600, 750, 800, 850, 900, 1000, 1100, 1200],
   'floor':     [1, 2, 1, 3, 5, 4, 2, 6, 7, 10],
@@ -23,8 +20,5 @@ modelo = LinearRegression()
 modelo.fit(X_estudo, y_estudo)
 
 previsao = modelo.predict(X_prova)
-print("Oq ele precisa prever!")
 print(y_prova.values)
-
-print("Oq ele previu!")
 print(previsao)
