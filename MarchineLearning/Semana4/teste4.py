@@ -55,4 +55,4 @@ print(f"O modelo fez a prova com {len(X_prova)} pacientes.")
 print(f"Taxa de acerto final: {mediaDeErro * 100:.2f}%")
 
 # Se você quiser simular a previsão de apenas UM paciente específico do teste:
-print(f"A previsão para o primeiro paciente da prova foi: {previsao[13]}")
+print(f"A previsão para o primeiro paciente da prova foi: {previsao[1]}")
