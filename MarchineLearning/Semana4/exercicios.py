@@ -21,6 +21,11 @@ X_prova, X_estudo, y_prova, y_estudo = train_test_split(X, y, test_size=0.50, ra
 modelo = LinearRegression()
 modelo.fit(X_estudo, y_estudo)
 
+peso = modelo.coef_[0]      
+base = modelo.intercept_
+
+print(f"Equação pronta: Preço = {peso} * pés_quadrados + {base}")
+
 previsao = modelo.predict(X_prova)
 print("Oq ele precisa prever!")
 print(y_prova.values)
