@@ -16,6 +16,9 @@ y = df["assinou"]
 
 X_treino, X_teste, y_treino, y_teste = train_test_split(X, y, test_size=0.3, random_state=42)
 
+print("\nCorrelação:")
+print(X_treino.corr())
+
 modelo = DecisionTreeClassifier(random_state=42)
 modelo.fit(X_treino, y_treino)
 
