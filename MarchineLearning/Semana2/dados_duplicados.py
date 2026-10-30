@@ -18,3 +18,5 @@ print(df.duplicated())
 df_limpo = df.drop_duplicates()
 print("Removendo linhas duplicadas")
 print(df_limpo)
+
+#revisando
